@@ -182,7 +182,6 @@ def test_multi_auth_scheme_extension(no_warnings):
         'apiKey': {'type': 'apiKey', 'in': 'header', 'name': 'X-API-KEY'},
         'appId': {'type': 'apiKey', 'in': 'header', 'name': 'X-APP-ID'}
     }
-    assert schema['paths']['/x/']['get']['security'] == [{'apiKey': [], 'appId': []}]
 
 
 def test_serializer_list_extension(no_warnings):

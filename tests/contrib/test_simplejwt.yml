@@ -23,6 +23,8 @@ paths:
             schema:
               $ref: '#/components/schemas/TokenObtainPair'
         required: true
+      security:
+      - {}
       responses:
         '200':
           content:
@@ -50,6 +52,8 @@ paths:
             schema:
               $ref: '#/components/schemas/TokenObtainSliding'
         required: true
+      security:
+      - {}
       responses:
         '200':
           content:
@@ -77,6 +81,8 @@ paths:
             schema:
               $ref: '#/components/schemas/TokenRefresh'
         required: true
+      security:
+      - {}
       responses:
         '200':
           content:
@@ -104,6 +110,8 @@ paths:
             schema:
               $ref: '#/components/schemas/TokenVerify'
         required: true
+      security:
+      - {}
       responses:
         '200':
           content:
@@ -118,7 +126,6 @@ paths:
       - x
       security:
       - jwtAuth: []
-      - {}
       responses:
         '200':
           content:

@@ -41,7 +41,6 @@ paths:
       security:
       - cookieAuth: []
       - basicAuth: []
-      - {}
       deprecated: true
       responses:
         '200':
@@ -95,7 +94,6 @@ paths:
       security:
       - cookieAuth: []
       - basicAuth: []
-      - {}
       responses:
         '201':
           description: No response body
@@ -128,7 +126,6 @@ paths:
       security:
       - cookieAuth: []
       - basicAuth: []
-      - {}
       responses:
         '201':
           description: No response body
@@ -153,7 +150,6 @@ paths:
       security:
       - cookieAuth: []
       - basicAuth: []
-      - {}
       responses:
         '200':
           description: No response body
@@ -165,7 +161,6 @@ paths:
       security:
       - cookieAuth: []
       - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -212,7 +207,6 @@ paths:
       security:
       - cookieAuth: []
       - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -240,7 +234,6 @@ paths:
       security:
       - cookieAuth: []
       - basicAuth: []
-      - {}
       responses:
         '204':
           description: No response body
@@ -293,7 +286,6 @@ paths:
       security:
       - cookieAuth: []
       - basicAuth: []
-      - {}
       responses:
         '200':
           content:

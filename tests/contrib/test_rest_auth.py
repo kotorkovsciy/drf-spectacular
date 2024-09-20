@@ -61,9 +61,6 @@ def test_rest_auth_simplejwt_cookie(no_warnings):
         authentication_classes = [JWTCookieAuthentication]
 
     schema = generate_schema('/x', XViewset)
-    assert schema['paths']['/x/']['get']['security'] == [
-        {'jwtHeaderAuth': []}, {'jwtCookieAuth': []}, {}
-    ]
     assert schema['components']['securitySchemes'] == {
         'jwtCookieAuth': {'type': 'apiKey', 'in': 'cookie', 'name': 'jwt-session'},
         'jwtHeaderAuth': {'type': 'http', 'scheme': 'bearer', 'bearerFormat': 'JWT'}

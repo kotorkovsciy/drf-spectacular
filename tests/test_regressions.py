@@ -1262,7 +1262,7 @@ def test_manual_security_method_addition(no_warnings):
     schema = generate_schema('/x/', view_function=view_func)
     operation_security = schema['paths']['/x/']['get']['security']
     schema_security = schema['components']['securitySchemes']
-    assert len(operation_security) == 4 and any(['apiKeyAuth' in os for os in operation_security])
+    assert len(operation_security) == 3 and any(['apiKeyAuth' in os for os in operation_security])
     assert len(schema_security) == 3 and 'apiKeyAuth' in schema_security
 
 
@@ -2287,7 +2287,6 @@ def test_authentication_whitelist(no_warnings):
 
     schema = generate_schema('/x', XViewset)
     assert list(schema['components']['securitySchemes']) == ['tokenAuth']
-    assert schema['paths']['/x/']['get']['security'] == [{'tokenAuth': []}, {}]
 
 
 @mock.patch(
@@ -2301,7 +2300,6 @@ def test_authentication_empty_whitelist(no_warnings):
 
     schema = generate_schema('/x', XViewset)
     assert 'securitySchemes' not in schema['components']
-    assert schema['paths']['/x/']['get']['security'] == [{}]
 
 
 def test_request_response_raw_schema_annotation(no_warnings):

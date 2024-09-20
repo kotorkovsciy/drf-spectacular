@@ -358,10 +358,8 @@ class AutoSchema(ViewInspector):
             auths.extend(spectacular_settings.SECURITY)
 
         perms = [p.__class__ for p in self.view.get_permissions()]
-        if permissions.AllowAny in perms:
-            auths.append({})
-        elif permissions.IsAuthenticatedOrReadOnly in perms and self.method in permissions.SAFE_METHODS:
-            auths.append({})
+        if permissions.AllowAny not in perms:
+            auths.append({}) 
         return auths
 
     def get_request_serializer(self) -> Optional[_SerializerType]:

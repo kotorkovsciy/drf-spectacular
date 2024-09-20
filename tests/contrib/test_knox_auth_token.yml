@@ -10,7 +10,6 @@ paths:
       - x
       security:
       - knoxApiToken: []
-      - {}
       responses:
         '200':
           content:
